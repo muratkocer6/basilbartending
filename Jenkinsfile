@@ -17,7 +17,6 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying app...'
-=======
   environment {
     IMAGE_NAME = "basil-backend"
     ECR_REPO = "182399722085.dkr.ecr.us-east-1.amazonaws.com/basil-backend"
@@ -46,7 +45,7 @@ pipeline {
       steps {
         sh 'docker tag $IMAGE_NAME $ECR_REPO'
         sh 'docker push $ECR_REPO'
->>>>>>> da52db34b40cd10f095a91dfdf5187f4b2dd1727
+        da52db34b40cd10f095a91dfdf5187f4b2dd1727
       }
     }
   }
